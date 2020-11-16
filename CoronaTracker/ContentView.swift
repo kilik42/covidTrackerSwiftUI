@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var covidFetch = CovidFetchRequest()
+    
     var body: some View {
-        Text("Hello, world!")
+        Text("\(covidFetch.totalData.confirmed)")
             .padding()
     }
 }
